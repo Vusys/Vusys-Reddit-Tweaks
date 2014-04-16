@@ -1,0 +1,107 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+@-moz-document domain("reddit.com") {
+    
+	/* Annoyances */ 
+	/* Removes tooltips on arrows */
+	.up:hover:after,
+	.upmod:hover:after,
+	.down:hover:after,
+	.downmod:hover:after {
+        display:none !important;
+	}
+	
+	/* Gold */
+	.give-gold, /* Removes "Give Gold" links */
+	.goldvertisement, /* Removes Gold adverts */
+	.infobar.gold, /* Removes gold infobar */
+	.giftgold /* Gold adverts */
+	{
+		display: none !important;
+	}
+	
+	.option.active.add:before{
+        display:none !important;
+    }
+    
+    /* Mod abuse and zealotry */
+    /* Forces arrows to be displayed */
+	.down,
+	.downmod,
+	.up,
+	.upmod
+    {
+	   visibility: visible !important;
+	   display:block !important;
+	}	
+    
+	body:not(.subscriber) .down,
+    body:not(.subscriber) .up
+    {
+        visibility: visible !important;
+    }
+    
+    body:not(.subscriber) .usertext-edit,
+    body:not(.subscriber) .sidebox.submit,
+    body:not(.subscriber) .commentingAs,
+    body:not(.subscriber) .markdownEditor, 
+    body:not(.subscriber) .report-button,
+    body:not(.subscriber) a[onclick*="return reply(this)"],
+    body:not(.subscriber) .helplink
+    {
+        display: block !important;
+    }
+	
+	/* Forces up to be up and down to be down, while hopefully not breaking custom up/ down images */
+	.arrow.up,
+	.arrow.upmod,
+	.arrow.down,
+	.arrow.downmod {
+		position: relative !important;
+		top: 0px !important;
+		
+	}
+	
+    /* Always enable comments */
+    .link div.entry ul.flat-list.buttons li{
+        font-size: 10px !important;
+    }
+    
+    div.comment.score-hidden, div.comment.score-hidden *{
+        position:relative !important;
+        top: 0px !important;
+        left: 0px !important;
+    }
+
+    /* No patronising rules behind comment textareas */
+    .commentarea > .usertext textarea{
+        background:none !important;
+    }
+    
+    /* Annoying wikibot hiding CSS */    
+    .comment .md h5+h6+h4+p,.comment .md h5+h6+h4+p+hr,.comment .md h5+h6+h4+p+hr+blockquote,.comment .md h5+h6+h4+p+hr+blockquote+hr,.comment .md h5+h6+h4+p+hr+blockquote+hr+p,.comment .md h5+h6+h4+p+hr+blockquote+hr+p+p {
+        display: block !important;
+    }  
+
+    
+    .comment .md h5+h6+h4:after, .comment .md:hover h5+h6+h4:after {
+       content: ""
+    }
+
+  
+    /* Fixes for /r/DaystromInstitute hiding AutoModerator */
+    .author[href$="/AutoModerator"]:before {
+       content: "";
+        padding:0px !important;
+    }
+    
+    .author[href$="/AutoModerator"] {
+       font-size: 1em !important; 
+    }
+
+    .side .author[href$="/AutoModerator"],
+    .side .flair-AutoModerator {
+       display: block !important;
+    }
+    
+
+}
