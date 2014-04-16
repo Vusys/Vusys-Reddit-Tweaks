@@ -1,4 +1,25 @@
 Vusys-Reddit-Tweaks
 ===================
 
-Userstyle to tweak Reddit
+##Installation
+
+Here: http://userstyles.org/styles/81255/vusys-reddit-tweaks
+
+##Annoyances
+
+* Removes tooltips on vote arrows
+* Removes "Give Gold" links 
+* Removes Gold adverts
+* Removes gold infobar 
+
+##Mod abuse and zealotry
+
+* Always show vote arrows, comment areas, submit links, report, edit and submit buttons. 
+* Prevent rearranging arrows
+* Removes patronising rules behind comment textareas
+* Removes annoying wikibot hiding CSS
+* Prevents hiding of 
+
+##Misc
+
+* Restores AutoModerator to the modlist
