@@ -18,7 +18,6 @@ Here: http://userstyles.org/styles/81255/vusys-reddit-tweaks
 * Prevent rearranging arrows
 * Removes patronising rules behind comment textareas
 * Removes annoying wikibot hiding CSS
-* Prevents hiding of 
 
 ##Misc
 
