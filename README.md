@@ -22,3 +22,4 @@ Here: http://userstyles.org/styles/81255/vusys-reddit-tweaks
 ##Misc
 
 * Restores AutoModerator to the modlist
+* Removes most of /r/videos "personal information" warnings
