@@ -1,4 +1,12 @@
 @namespace url(http://www.w3.org/1999/xhtml);
+
+/* Subreddits only */
+@-moz-document regexp("*reddit/.com\/r\/") {
+
+
+}
+
+
 @-moz-document domain("reddit.com") {
 	
 	/* Annoyances */ 
@@ -30,8 +38,8 @@
 	.up,
 	.upmod
 	{
-	   visibility: visible !important;
-	   display:block !important;
+		visibility: visible !important;
+		display:block !important;
 	}	
 	
 	body:not(.subscriber) .down,
@@ -40,7 +48,8 @@
 		visibility: visible !important;
 	}
 	
-	body:not(.subscriber) .usertext-edit,
+	/* Can't be undone without issues :/ */
+	/*body:not(.subscriber) .usertext-edit,*/
 	body:not(.subscriber) .sidebox.submit,
 	body:not(.subscriber) .commentingAs,
 	body:not(.subscriber) .markdownEditor, 
@@ -77,40 +86,44 @@
 		background:none !important;
 	}
 	
-	/* Annoying wikibot hiding CSS */    
+	/* Annoying wikibot hiding CSS */	 
 	.comment .md h5+h6+h4+p,.comment .md h5+h6+h4+p+hr,.comment .md h5+h6+h4+p+hr+blockquote,.comment .md h5+h6+h4+p+hr+blockquote+hr,.comment .md h5+h6+h4+p+hr+blockquote+hr+p,.comment .md h5+h6+h4+p+hr+blockquote+hr+p+p {
 		display: block !important;
 	}  
 
 	
 	.comment .md h5+h6+h4:after, .comment .md:hover h5+h6+h4:after {
-	   content: ""
+		content: ""
 	}
 
   
 	/* Fixes for /r/DaystromInstitute hiding AutoModerator */
 	.author[href$="/AutoModerator"]:before {
-	   content: "";
+		content: "";
 		padding:0px !important;
 	}
 	
 	.author[href$="/AutoModerator"] {
-	   font-size: 1em !important; 
+		font-size: 1em !important; 
 	}
 
 	.side .author[href$="/AutoModerator"],
 	.side .flair-AutoModerator {
-	   display: block !important;
+		display: block !important;
 	}
 	
-	/* /r/videos "personal information" tooltips */
-
-	ul.flat-list.buttons li a[onclick="return reply(this)"]:hover:before, 
-	.commentarea>.usertext:before,
-	.commentarea .child .usertext .usertext-edit:before{
-	{
+	/* /r/videos */
+	
+	ul.flat-list.buttons li a[onclick="return reply(this)"]:hover:before {
 		content: '' !important;  
 		display: none !important;
+	}
+	.commentarea>.usertext:before {
+		content: '' !important;  
+		display: none !important;
+	}
+	.commentarea .child .usertext .usertext-edit:before {
+		content: '' !important;
 		font-size: 0px !important;
 	}
 	
