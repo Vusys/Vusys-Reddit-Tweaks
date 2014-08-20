@@ -1,10 +1,11 @@
 @namespace url(http://www.w3.org/1999/xhtml);
 
-/* Subreddits only */
+/* Subreddits only 
 @-moz-document regexp("*reddit/.com\/r\/") {
 
 
 }
+*/
 
 
 @-moz-document domain("reddit.com") {
