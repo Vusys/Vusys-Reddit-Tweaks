@@ -86,7 +86,7 @@
 	}
 
 	/* No patronising rules behind comment textareas */
-	.commentarea > .usertext textarea{
+	.commentarea .child .usertext textarea, .commentarea > .usertext textarea{
 		background:none !important;
 	}
 	
@@ -137,5 +137,14 @@
 		visibility: visible !important;
 	}
 	
+	/* Remove stupid report reasons */
+	.report-action-form ol li:nth-child(2),
+	.report-action-form ol li:nth-child(3),
+	.report-action-form ol li:nth-child(4),
+	.report-action-form ol li:nth-child(5)
+	{
+		display:none;
+	} 
+
 
 }
