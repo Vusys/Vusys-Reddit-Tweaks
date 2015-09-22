@@ -1,5 +1,11 @@
 @namespace url(http://www.w3.org/1999/xhtml);
 
+/* Subreddits only 
+@-moz-document regexp("*reddit/.com\/r\/") {
+
+
+}
+*/
 
 
 @-moz-document domain("reddit.com") {
@@ -48,13 +54,16 @@
 	body:not(.subscriber) .sidebox.submit,
 	body:not(.subscriber) .commentingAs,
 	body:not(.subscriber) .markdownEditor, 
-	/*body:not(.subscriber) .report-button,*/
 	body:not(.subscriber) a[onclick*="return reply(this)"],
 	body:not(.subscriber) .helplink
 	{
 		display: block !important;
 	}
 	
+	body:not(.subscriber) .report-button{
+		display: inline-block;
+	}
+
 	/* Forces up to be up and down to be down, while hopefully not breaking custom up/ down images */
 	.arrow.up,
 	.arrow.upmod,
@@ -77,10 +86,9 @@
 	}
 
 	/* No patronising rules behind comment textareas */
-	.commentarea .child .usertext textarea, .commentarea > .usertext textarea{
+	.commentarea > .usertext textarea{
 		background:none !important;
 	}
-		
 	
 	/* Annoying wikibot hiding CSS */	 
 	.comment .md h5+h6+h4+p,.comment .md h5+h6+h4+p+hr,.comment .md h5+h6+h4+p+hr+blockquote,.comment .md h5+h6+h4+p+hr+blockquote+hr,.comment .md h5+h6+h4+p+hr+blockquote+hr+p,.comment .md h5+h6+h4+p+hr+blockquote+hr+p+p {
@@ -128,14 +136,6 @@
 	div.commentarea div.sitetable {
 		visibility: visible !important;
 	}
-
-	/* Remove stupid report reasons */
-	.report-action-form ol li:nth-child(2),
-	.report-action-form ol li:nth-child(3),
-	.report-action-form ol li:nth-child(4),
-	.report-action-form ol li:nth-child(5)
-	{
-		display:none;
-	} 
+	
 
 }
