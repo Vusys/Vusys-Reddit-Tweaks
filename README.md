@@ -11,6 +11,7 @@ Here: http://userstyles.org/styles/81255/vusys-reddit-tweaks
 * Removes "Give Gold" links 
 * Removes Gold adverts
 * Removes gold infobar 
+* Removes irrelevant/ silly report reasons - seriously, what is "breaking reddit" meant to mean?
 
 ##Mod abuse and zealotry
 
